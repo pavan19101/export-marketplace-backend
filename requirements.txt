@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic[email]
+pyjwt
+passlib[bcrypt]
+python-multipart
+python-dotenv
+# psycopg2-binary # Uncomment for PostgreSQL support
+# alembic # Uncomment for migrations
