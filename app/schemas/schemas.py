@@ -17,6 +17,7 @@ class ClientCreate(BaseModel):
     password: str
     address: str
     country: str
+    otp_code: str
 
 class ClientLogin(BaseModel):
     email: EmailStr
@@ -144,3 +145,10 @@ class SupportTicketOut(BaseModel):
     created_at: datetime
     class Config:
         from_attributes = True
+
+class OTPSend(BaseModel):
+    email: EmailStr
+
+class OTPVerify(BaseModel):
+    email: EmailStr
+    otp_code: str

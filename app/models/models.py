@@ -147,3 +147,11 @@ class SupportTicket(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     client = relationship("Client", back_populates="tickets")
+
+class OTP(Base):
+    __tablename__ = "otps"
+    id = Column(Integer, primary_key=True, index=True)
+    email = Column(String, index=True)
+    code = Column(String)
+    expires_at = Column(DateTime)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
